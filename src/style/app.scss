@@ -1,0 +1,26 @@
+@import 'bourbon';
+@import 'neat';
+
+@import 'modules/colors';
+@import 'modules/mixins';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack-helvetica;
+  @include font-size(16px);
+}
+
+$neat-grid: (
+  columns: 12,
+  gutter: 10px,
+);
+
+.container {
+  @include grid-container;
+  @include grid-visual;
+}
+
+.title {
+  @include grid-column(3);
+}

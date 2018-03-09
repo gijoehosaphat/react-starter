@@ -1,0 +1,90 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": [
+    "flowtype",
+    "import",
+    "react"
+  ],
+  "rules": {
+    "indent": [2, 2, { "ignoredNodes": ["JSXElement *", "JSXElement"] }],
+    "quotes": [2, "single"],
+    "linebreak-style": [2, "unix"],
+    "max-len": [0, { "code": 300 }],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "constructor-super": 2,
+    "no-confusing-arrow": ["error", {"allowParens": false}],
+    "no-constant-condition": "error",
+    "no-inner-declarations": "error",
+    "no-class-assign": 2,
+    "no-const-assign": 2,
+    "no-console": ["error", { "allow": ["warn", "error", "info", "ignoredYellowBox"] }],
+    "no-dupe-class-members": 2,
+    "no-global-assign": 2,
+    "no-useless-escape": 0,
+    "no-unsafe-negation": 2,
+    "no-var": 1,
+    "no-this-before-super": 2,
+    "object-shorthand": [2, "always"],
+    "prefer-spread": 1,
+    "prefer-template": 1,
+    "require-yield": 2,
+    "jsx-quotes": 1,
+    "react/forbid-prop-types": 0,
+    "react/jsx-boolean-value": 0,
+    "react/jsx-closing-bracket-location": [1, "line-aligned"],
+    "react/jsx-curly-spacing": 1,
+    "react/jsx-indent-props": [2, 4],
+    "react/jsx-max-props-per-line": 1,
+    "react/jsx-no-bind": 0,
+    "react/jsx-no-duplicate-props": 1,
+    "react/jsx-no-undef": 1,
+    "react/sort-prop-types": 1,
+    "react/jsx-sort-props": [1, { "ignoreCase": true }],
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/no-danger": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-direct-mutation-state": 1,
+    "react/no-multi-comp": 1,
+    "react/no-set-state": 0,
+    "react/no-unknown-property": 1,
+    "react/prefer-es6-class": 1,
+    "react/prop-types": 1,
+    "react/react-in-jsx-scope": 1,
+    "react/self-closing-comp": 1,
+    "react/sort-comp": 0,
+    "react/jsx-wrap-multilines": 1,
+    "space-infix-ops": 0,
+		"no-duplicate-imports": 0,
+		"import/no-duplicates": 1,
+		"flowtype/define-flow-type": 1,
+		"flowtype/space-before-type-colon": [
+			1,
+			"never"
+		],
+		"flowtype/use-flow-type": 1,
+		"flowtype/valid-syntax": 1,
+		"flowtype/type-id-match": [
+			2,
+			"^([A-Z]+[a-z0-9A-Z]*)$"
+		]
+  },
+  "extends": "eslint:recommended",
+  "settings": {
+		"flowtype": {
+			"onlyFilesWithFlowAnnotation": false
+    },
+    "eslint.packageManager": "yarn"
+	},
+  "globals": {
+    "fetch": false
+  }
+}
