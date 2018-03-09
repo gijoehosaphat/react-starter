@@ -3,19 +3,22 @@ import PropTypes from 'prop-types'
 import { render } from 'react-dom'
 import { PersistGate } from 'redux-persist/integration/react'
 
+//ReactiveJS
+import 'rxjs'
+
 //Reactotron
 import './config/Reactotron'
 
 //Amplify
-import Amplify from 'aws-amplify'
-Amplify.configure({
-  Auth: {
-    identityPoolId: process.env.AMPLIFY.identityPoolId,
-    region: process.env.AMPLIFY.region, 
-    userPoolId: process.env.AMPLIFY.userPoolId,
-    userPoolWebClientId: process.env.AMPLIFY.userPoolWebClientId,
-  },
-})
+// import Amplify from 'aws-amplify'
+// Amplify.configure({
+//   Auth: {
+//     identityPoolId: process.env.AMPLIFY.identityPoolId,
+//     region: process.env.AMPLIFY.region, 
+//     userPoolId: process.env.AMPLIFY.userPoolId,
+//     userPoolWebClientId: process.env.AMPLIFY.userPoolWebClientId,
+//   },
+// })
 
 //Redux
 import { Provider } from 'react-redux'

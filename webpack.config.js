@@ -35,10 +35,10 @@ module.exports = function(env) {
           BROWSER: JSON.stringify(true),
           VERSION: JSON.stringify(version),
           AMPLIFY: JSON.stringify({
-            identityPoolId: '',
-            region: '',
-            userPoolId: '',
-            userPoolWebClientId: '',
+            identityPoolId: '<INSERT_VALUE>',
+            region: '<INSERT_VALUE>',
+            userPoolId: '<INSERT_VALUE>',
+            userPoolWebClientId: '<INSERT_VALUE>',
           }),
         }
       }),

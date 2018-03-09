@@ -4,10 +4,10 @@ import Reactotron from 'reactotron-react-js'
 import storage from 'redux-persist/lib/storage'
 
 //App reducers
-import rootReducer from './reducers'
+import rootReducer from './rootReducer'
 
 //App epics
-import rootEpics from './epics'
+import rootEpic from './rootEpic'
 
 //History
 import { createHashHistory } from 'history'
@@ -16,11 +16,11 @@ const history = createHashHistory()
 //Middlewhere
 import { createEpicMiddleware } from 'redux-observable'
 import { routerMiddleware } from 'react-router-redux'
-const middleware = applyMiddleware(createEpicMiddleware(rootEpics), routerMiddleware(history))
+const middleware = applyMiddleware(createEpicMiddleware(rootEpic), routerMiddleware(history))
 
 //Persist config
 const persistConfig = {
-  key: 'real-shot-challenge',
+  key: 'react-starter',
   storage,
 }
 

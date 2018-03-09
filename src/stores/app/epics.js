@@ -1,10 +1,11 @@
 import { ajax } from 'rxjs/observable/dom/ajax'
+import * as actions from './actions'
 
-// epic
-export const exampleEpic = (action$, store) => {
-  return action$.ofType(/*ACTION_TO_REACT_TO*/).mergeMap((action) => {
-    return ajax.get(/*url*/action.payload).map(response => {
-      /*actionToTriggerWithResponse(response)*/
+// Epic example
+export const exampleEpic = (action$, /*store*/) => {
+  return action$.ofType(actions.EXAMPLE_GET).mergeMap((action) => {
+    return ajax.getJSON(`https://jsonplaceholder.typicode.com/posts/${action.payload}`).map(response => {
+      return actions.exampleGetFulfilled(response)
     })
   })
 }

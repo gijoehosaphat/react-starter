@@ -36,7 +36,13 @@ module.exports = function(env) {
           REACTOTRON: JSON.stringify(false),
           NODE_ENV: JSON.stringify(process.env.NODE_ENV),
           BROWSER: JSON.stringify(true),
-          VERSION: JSON.stringify(version)
+          VERSION: JSON.stringify(version),
+          AMPLIFY: JSON.stringify({
+            identityPoolId: '<INSERT_VALUE>',
+            region: '<INSERT_VALUE>',
+            userPoolId: '<INSERT_VALUE>',
+            userPoolWebClientId: '<INSERT_VALUE>',
+          }),
         }
       }),
       new webpack.BannerPlugin({ 
